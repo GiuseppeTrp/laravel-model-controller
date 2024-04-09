@@ -1,7 +1,6 @@
 <?php
-
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +11,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('homepage');
-})->name(
-    'homepage'
-);
+// lancia la funzione index del pagecontroller quando si visita l homepage
+Route::get('/',[PageController::class, 'index'])->name( 'homepage');
