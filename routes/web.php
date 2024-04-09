@@ -13,3 +13,4 @@ use Illuminate\Support\Facades\Route;
 */
 // lancia la funzione index del pagecontroller quando si visita l homepage
 Route::get('/',[PageController::class, 'index'])->name( 'homepage');
+Route::get('/film',[PageController::class,'showMovie'])->name('film');
